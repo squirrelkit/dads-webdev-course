@@ -1,65 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaya's website</title>
-</head>
-<body>
-    <div>
-        <h1 class="title"style="color:magenta; font-size: 50px">A great big heading</h1>
-        <!-- hi there
-        multiliney-->
-        <p style="color:white; font-size: 40px">White</p>
-        <p style="color:black; font-size: 35px">Black</p>
-        <p style="color:red; font-size: 30px">Red</p>
-        <p style="color:green; font-size: 25px">Green</p>
-        <p style="color:blue; font-size: 20px"> Blue</p>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaya's website</title>
+    </head>
+    
+    <body class="bg container">
+        <div>
+            <!-- hi there
+                multiliney-->
+                
+                <div class="container">
+                    
+                    <h1 class="title" style="color:magenta; font-size: 50px">A great big heading</h1>
+        
+                <div class="card">
+                    <p style="color:white; font-size: 40px">White</p>
+                    <p style="color:black; font-size: 35px">Black</p>
+                    <p style="color:red; font-size: 30px">Red</p>
+                    <p style="color:green; font-size: 25px">Green</p>
+                    <p style="color:blue; font-size: 20px"> Blue</p>
 
-        <p class="white">White</p>
-        <p class="black">Black</p>
-        <p class="red">Red</p>
-        <p class="green">Green</p>
-        <p class="blue"> Blue</p>
-    </div>
-<!-- I am to creat five different classes, white, black, red, green and blue.
-I am to set ht ecolors to match the names.
-I am to then apply the classes.-->
-    <!-- SCRIPT -->
-<script>
+                </div>
+            </div>
+            
+            <p class="white">White</p>
+            <p class="black">Black</p>
+            <p class="red">Red</p>
+            <p class="green">Green</p>
+            <p class="blue"> Blue</p>
 
-</script>
+        
+        </div>
+
+        
+        <!-- I am to creat five different classes, white, black, red, green and blue.
+        I am to set ht ecolors to match the names.
+        I am to then apply the classes.-->
+        <!-- SCRIPT -->
+        <script>
+            
+            
+        </script>
+<!-- My goals are:
+To get my background to be a picture
+To put a container in the senter of my picture background
+To get the background of the container to be a gradient from top left to bottom right -->
 
 <!-- STYLE -->
 <style>
     .title {
         color="";
     }
-
+    
     .white {
         color: #ffffff;
     }
-
+    
     .black {
         color: #000000;
     }
-
+    
     .red {
         color: #ff0000;
     }
-
+    
     .green {
         color: #00ff00;
-    }
-    
-    .blue {
-        color: #0000ff;
-    }
+        }
+        
+        .blue {
+            color: #0000ff;
+        }
+        
+        .random {
+            color: #ebc463;
+        }
 
-    .magenta {
-        color: #ddaaff;
-    }
-</style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+
+        }
+        
+        .card {
+            background-color: #0000ff;
+            border-radius: 5px;
+            padding: 10px;
+            width: 500px;
+
+
+            height: 200px;
+            position: relative;
+            border: #ebc463 5px solid;
+            background-image: linear-gradient(to bottom right, #bbff00, #aaf0ff);
+        }
+
+        .vertical-center
+
+        body, html {
+            height: 100%;
+        }
+        
+        .bg {
+            background-image: url("https://fastly.picsum.photos/id/15/2500/1667.jpg?hmac=Lv03D1Y3AsZ9L2tMMC1KQZekBVaQSDc1waqJ54IHvo4");
+        
+            height: 100%;
+        
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        
+
+        </style>
 
 </body>
+
 </html>
