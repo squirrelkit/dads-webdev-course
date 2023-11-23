@@ -8,31 +8,76 @@
     </head>
     
     <body class="bg container">
-        <div>
-            <!-- hi there
-                multiliney-->
-                
+        <div class="wrapper">                
                 <div class="container">
                     
-                    <h1 class="title" style="color:magenta; font-size: 50px">A great big heading</h1>
+                    <!-- <h1 class="title" style="color:magenta; font-size: 50px">A great big heading</h1> -->
         
                 <div class="card">
-                    <p style="color:white; font-size: 40px">White</p>
-                    <p style="color:black; font-size: 35px">Black</p>
-                    <p style="color:red; font-size: 30px">Red</p>
-                    <p style="color:green; font-size: 25px">Green</p>
-                    <p style="color:blue; font-size: 20px"> Blue</p>
-
+                    <p style="color:white; font-size: 10px">White</p>
+                    <p style="color:black; font-size: 10px">Black</p>
+                    <p style="color:red; font-size: 10px">Red</p>
+                    <p style="color:green; font-size: 10px">Green</p>
+                    <p style="color:blue; font-size: 10px"> Blue</p>
+                    
+                    <p class="white">White</p>
+                    <p class="black">Black</p>
+                    <p class="red">Red</p>
+                    <p class="green">Green</p>
+                    <p class="blue"> Blue</p>
                 </div>
-            </div>
-            
-            <p class="white">White</p>
-            <p class="black">Black</p>
-            <p class="red">Red</p>
-            <p class="green">Green</p>
-            <p class="blue"> Blue</p>
 
+                <div class="card"></div>
+                <div class="card"></div>
+
+                
+            </div>
+                <div class="container">
+                    
+                    <!-- <h1 class="title" style="color:magenta; font-size: 50px">A great big heading</h1> -->
         
+                <div class="card">
+                    <p style="color:white; font-size: 10px">White</p>
+                    <p style="color:black; font-size: 10px">Black</p>
+                    <p style="color:red; font-size: 10px">Red</p>
+                    <p style="color:green; font-size: 10px">Green</p>
+                    <p style="color:blue; font-size: 10px"> Blue</p>
+                    
+                    <p class="white">White</p>
+                    <p class="black">Black</p>
+                    <p class="red">Red</p>
+                    <p class="green">Green</p>
+                    <p class="blue"> Blue</p>
+                </div>
+
+                <div class="card"></div>
+                <div class="card"></div>
+
+
+            </div>
+                <div class="container">
+                    
+                    <!-- <h1 class="title" style="color:magenta; font-size: 50px">A great big heading</h1> -->
+        
+                <div class="card">
+                    <p style="color:white; font-size: 10px">White</p>
+                    <p style="color:black; font-size: 10px">Black</p>
+                    <p style="color:red; font-size: 10px">Red</p>
+                    <p style="color:green; font-size: 10px">Green</p>
+                    <p style="color:blue; font-size: 10px"> Blue</p>
+                    
+                    <p class="white">White</p>
+                    <p class="black">Black</p>
+                    <p class="red">Red</p>
+                    <p class="green">Green</p>
+                    <p class="blue"> Blue</p>
+                </div>
+
+                <div class="card"></div>
+                <div class="card"></div>
+
+
+            </div>
         </div>
 
         
@@ -44,10 +89,17 @@
             
             
         </script>
-<!-- My goals are:
+<!-- 2023-22-21 Goals:
 To get my background to be a picture
 To put a container in the senter of my picture background
 To get the background of the container to be a gradient from top left to bottom right -->
+
+<!-- 2023-11-22 Goals:
+ - [ ] Center my card vertically and horizontally (incomplete from yesterday)
+ - [ ] I make three cards. I space then evenly.
+ - [ ] Make two more rows, so that there are a total of nine cards, and evenly space them.
+-->
+
 
 <!-- STYLE -->
 <style>
@@ -86,6 +138,11 @@ To get the background of the container to be a gradient from top left to bottom 
             height: 100vh;
             width: 100%;
 
+            flex-direction: row;
+            
+
+
+
         }
         
         .card {
@@ -98,7 +155,8 @@ To get the background of the container to be a gradient from top left to bottom 
             height: 200px;
             position: relative;
             border: #ebc463 5px solid;
-            background-image: linear-gradient(to bottom right, #bbff00, #aaf0ff);
+            background-image: linear-gradient(to bottom right, #bbff60, #a000ff);
+            
         }
 
         .vertical-center
@@ -111,10 +169,19 @@ To get the background of the container to be a gradient from top left to bottom 
             background-image: url("https://fastly.picsum.photos/id/15/2500/1667.jpg?hmac=Lv03D1Y3AsZ9L2tMMC1KQZekBVaQSDc1waqJ54IHvo4");
         
             height: 100%;
-        
+            margin: 0;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
         }
         
         
