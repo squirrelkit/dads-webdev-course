@@ -6,24 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaya's website</title>
 </head>
-
 <body>
     <div class="top-nav"></div>
-    <div class="under-nav"></div>
-    <div class="side-nav"></div>
-    <div class="main"></div>
-    <div class="column-wrapper">
-        <div class="flex row-wrapper">
-            <div class="card">
-                <div class="img-wrapper">
-                    <img src="https://picsum.photos/200/400?random=0" alt="picsum placeholder image for card component">
+    <div class="flex under-nav">
+
+        <div class="side-nav"></div>
+        <div class="flex main">
+            <div class="column-wrapper">
+                <div class="flex row-wrapper">
+                    <div class="flex card">
+                        <div class="img-wrapper">
+                            <img src="https://picsum.photos/200/400?random=0" alt="picsum placeholder image for card component">
                         </div>
-
-                    <div class="card-content-wrapper flex"></div>
+                        
+                        <div class="card-content-wrapper flex">
+                            <h1>Heading</h1>
+                            <p>Paragraph</p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
-
         </div>
-</body>
+        </div>
 
+    </body>
+    
 </html>
+    <style>
+        .top-nav {
+            width: 100%;
+            height: 5rem;
+            background-color: #ffaabb;
+        }
+    
+        .under-nav {
+            background: #000000;
+            color: white;
+            height: calc(100vh - 5rem);
+            width: 100%;
+            position: relative;
+        }
+
+        .side-nav {
+            width: 5rem;
+            height: 100%;
+            background-color: #113645;
+        }
+
+        .main {
+            background: #ff675a;
+            width: 100%;
+            padding: 5rem 0 0 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .card {
+            background: #475632;
+
+        }
+
+        .card-content-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-wrapper {
+            width: 30%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    
+        body {
+            margin: 0;
+        }
+    </style>
