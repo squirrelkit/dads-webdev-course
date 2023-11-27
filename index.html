@@ -19,7 +19,7 @@
                             <img src="https://picsum.photos/200/400?random=0" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -29,7 +29,7 @@
                             <img src="https://picsum.photos/200/400?random=1" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -39,7 +39,7 @@
                             <img src="https://picsum.photos/200/400?random=2" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -51,7 +51,7 @@
                             <img src="https://picsum.photos/200/400?random=3" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -61,7 +61,7 @@
                             <img src="https://picsum.photos/200/400?random=4" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -71,7 +71,7 @@
                             <img src="https://picsum.photos/200/400?random=5" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -83,7 +83,7 @@
                             <img src="https://picsum.photos/200/400?random=6" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -93,7 +93,7 @@
                             <img src="https://picsum.photos/200/400?random=7" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -103,7 +103,7 @@
                             <img src="https://picsum.photos/200/400?random=8" alt="picsum placeholder image for card component">
                         </div>
                         
-                        <div class="card-content-wrapper flex">
+                        <div class="card-content-wrapper flex text">
                             <h1>Heading</h1>
                             <p>Paragraph</p>
                         </div>
@@ -140,11 +140,11 @@
         .side-nav {
             width: 5rem;
             height: 100%;
-            background-color: #113645;
+            background: linear-gradient(to bottom right, #ffaa00, #00aaff, #aa00ff);
         }
 
         .main {
-            background: #ff675a;
+            background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444, #555555);
             width: 100%;
             padding: 5rem 0 0 0;
         }
@@ -154,13 +154,16 @@
         }
 
         .card {
-            background: #475632;
+            background: linear-gradient(to bottom right,  #b56fff, #afb673, #ffaabb, #b5600f);
+            padding: .5rem;
+            border-radius: 0.5rem;
 
         }
 
         .card-content-wrapper {
             display: flex;
             flex-direction: column;
+
         }
 
         .img-wrapper {
@@ -181,7 +184,10 @@
             gap: 1rem;
         }
     
-        
+        .text {
+            background: linear-gradient(to bottom right,#113645, #3a0b6c, #113645,  #3a0b6c, #113645,  #3a0b6c, #113645,  #3a0b6c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;}
 
         body {
             margin: 0;
