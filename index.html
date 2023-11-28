@@ -135,6 +135,7 @@
             height: calc(100vh - 5rem);
             width: 100%;
             position: relative;
+            align-content: space-between;
         }
 
         .side-nav {
@@ -148,24 +149,25 @@
         .main {
             background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444, #555555);
             width: 100%;
-            padding: 5rem 0 0 0;
+            /* padding: .8rem 0 0 0; */
+
         }
 
         .flex {
             display: flex;
+            align-content: space-between;
         }
 
         .card {
             background: linear-gradient(to bottom right,  #b56fff, #afb673, #ffaabb, #b5600f);
             padding: .5rem;
             border-radius: 0.5rem;
-
         }
+
 
         .card-content-wrapper {
             display: flex;
             flex-direction: column;
-
         }
 
         .img-wrapper {
@@ -184,12 +186,16 @@
         .column-wrapper {
             flex-direction: column;
             gap: 1rem;
+            width: 100%;
+            align-items: center;
         }
     
         .text {
-            background: linear-gradient(to bottom right,#113645, #3a0b6c, #113645,  #3a0b6c, #113645,  #3a0b6c, #113645,  #3a0b6c);
+            background: linear-gradient(to bottom right,#113645, #3a0b6c, #113645,  #3a0b6c, #113645,  #3a0b6c);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;}
+            -webkit-text-fill-color: transparent;
+            align-content: f;
+        }
 
         body {
             margin: 0;
