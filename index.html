@@ -7,7 +7,18 @@
     <title>Kaya's website</title>
 </head>
 <body>
-    <div class="top-nav"></div>
+    <div class="top-nav flex space-between">
+        <div>
+            <svg class="home-logo" xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/></svg>
+        </div>
+
+        <ul class="column">
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+
+    </div>
     <div class="flex under-nav">
 
         <div class="side-nav"></div>
@@ -124,9 +135,29 @@
 </html>
     <style>
         .top-nav {
-            width: 100%;
+            width: 100vw;
             height: 5rem;
             background: linear-gradient(180deg, #ffaabb, #ee0fff, #a000ff, #1a34ff);
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .column {
+            display: flex;
+            justify-content: space-between;
+        
+        }
+
+        .home-logo {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        .space-between {
+            display: flex;
+            justify-content: space-between;
         }
     
         .under-nav {
@@ -143,6 +174,7 @@
             height: 100%;
             background: linear-gradient(180deg, #1a34ff, #a000ff, #ee0fff, #ffaabb);
             /* border-right: #123456 4px solid; */
+            
 
         }
 
