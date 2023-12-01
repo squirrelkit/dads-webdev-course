@@ -30,7 +30,7 @@
     }
 
 
-    p {
+    p.description {
         align-content: center;
         justify-content: center;
         flex-direction: column;
@@ -64,12 +64,6 @@
 
     }
 
-    .element2 {
-        width: 100%;
-        height: 5%;
-        animation: pulse 5s infinite;
-
-    }
 
     @keyframes pulse {
         0% {
@@ -230,11 +224,11 @@
 
     }
 
-    p {
+    p.description {
         align-content: center;
         justify-content: center;
         flex-direction: column;
-        border: ;
+        border: none;
         width: 25rem;
         height: 30rem;
         overflow: auto;
@@ -264,23 +258,6 @@
 
 
 
-    }
-
-    .element2 {
-        width: 100%;
-        height: 5%;
-        animation: pulse 5s infinite;
-
-    }
-
-    @keyframes pulse {
-        0% {
-            background-color: #3a0b6c;
-        }
-
-        100% {
-            background-color: #113645;
-        }
     }
 
 
