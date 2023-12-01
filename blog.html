@@ -26,8 +26,26 @@
 
         <div class="side-nav"></div>
         <div class="main element">
-            <h1 class="element2">Blog</h1>
-            <p class="font1  element1">Now I will take you to Philip, who was having a scary time of his own. He had entered the Void and now he was falling, and not falling, and being pulled left and right, and being pushed down and pulled up, and being stretched and compacted, and being shouted and whispered at, and being angry and sad and happy and every emotion you could ever imagine all at once. Then, after a yearlong instant, it stopped. No falling, no pushing or pulling, no voices, loud or quiet, no stretching or being pushed together. Nothing. Just numbness. Then feeling. Then he saw a landscape forming around him. Then everything went black, but only for a moment. Philip found himself standing, somewhat shakily, on a hill with meadows and small patches of woodland all around. He saw a silver stream winding it's way down the hill Philip was standing on, coming from a small spring filled with glass clear water. Philip realized then just how thirsty he was, and forgot about all else until he had taken a long drink from the spring. The water was clear and fresh, and very cold, and refreshed and cleared Philip's muddled mind very much. Then he straightened up and took a better look around him. Now I could not ell you what the place looked like from Philip's point of view, for afterward he always said simply: "It was like nothing and everything all at once." So I will take you to the Good Magician's study, where, taking a break from his never ending stream of information, he was eating and watching his magic mirror. he saw what Philip saw, though since he was not in the scene he was able to describe it to his wife and children. "The filly is standing on a hill, with a spring beside him, creating a stream that flows down the hill, and there are multiple smaller hills around him, often with small forests around their bases. There is a lake a few miles to the east, the sun is just setting, there are many flowers all around..."</p>
+            <h1 class="">Blog</h1>
+            <p>Now I will take you to Philip, who was having a scary time of his own. He had entered the Void and now he
+                was falling, and not falling, and being pulled left and right, and being pushed down and pulled up, and
+                being stretched and compacted, and being shouted and whispered at, and being angry and sad and happy and
+                every emotion you could ever imagine all at once. Then, after a yearlong instant, it stopped. No
+                falling, no pushing or pulling, no voices, loud or quiet, no stretching or being pushed together.
+                Nothing. Just numbness. Then feeling. Then he saw a landscape forming around him. Then everything went
+                black, but only for a moment. Philip found himself standing, somewhat shakily, on a hill with meadows
+                and small patches of woodland all around. He saw a silver stream winding it's way down the hill Philip
+                was standing on, coming from a small spring filled with glass clear water. Philip realized then just how
+                thirsty he was, and forgot about all else until he had taken a long drink from the spring. The water was
+                clear and fresh, and very cold, and refreshed and cleared Philip's muddled mind very much. Then he
+                straightened up and took a better look around him. Now I could not ell you what the place looked like
+                from Philip's point of view, for afterward he always said simply: "It was like nothing and everything
+                all at once." So I will take you to the Good Magician's study, where, taking a break from his never
+                ending stream of information, he was eating and watching his magic mirror. he saw what Philip saw,
+                though since he was not in the scene he was able to describe it to his wife and children. "The filly is
+                standing on a hill, with a spring beside him, creating a stream that flows down the hill, and there are
+                multiple smaller hills around him, often with small forests around their bases. There is a lake a few
+                miles to the east, the sun is just setting, there are many flowers all around..."</p>
 
         </div>
 
@@ -49,9 +67,28 @@
 
     .element1 {
         width: 100%;
-        height: 25%;
+        height: 30%;
         animation: pulse 5s infinite;
 
+    }
+
+    /* body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    } */
+
+
+
+    p {
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        border: dotted;
+        width: 25rem;
+        height: 30rem;
+        overflow: auto;
+        font-size: 1.2rem;
     }
 
     @keyframes pulse {
@@ -62,6 +99,21 @@
         100% {
             background-color: #113645;
         }
+    }
+
+    .main {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444, #555555);
+        width: 100%;
+        height: 100%;
+
+        /* padding: .8rem 0 0 0; */
+
     }
 
     .element2 {
@@ -80,6 +132,7 @@
             background-color: #113645;
         }
     }
+
     /* Goals:
     get the text to animate, changing colors
     get the links to be buttons
@@ -142,13 +195,6 @@
 
     }
 
-    .main {
-        background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444, #555555);
-        width: 100%;
-        height: 100%;
-        /* padding: .8rem 0 0 0; */
-
-    }
 
     .flex {
         display: flex;
