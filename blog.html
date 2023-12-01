@@ -17,7 +17,7 @@
 
         <ul class="flex">
             <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a class="btn" href="/blog">Blog</a></li>
             <li><a href="/about">About</a></li>
         </ul>
 
@@ -63,6 +63,22 @@
         width: 100vw;
         height: 5rem;
         background: linear-gradient(180deg, #ffaabb, #ee0fff, #a000ff, #1a34ff);
+    }
+
+    .btn {
+        background-color: #dddddd;
+        border: none;
+        color: #000000;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #ee0fff;
+        color: white;
     }
 
     .element1 {
