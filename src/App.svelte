@@ -1,49 +1,42 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-    import Card from './components/Card.svelte';
+  import svelteLogo from "./assets/svelte.svg";
+  import viteLogo from "/vite.svg";
+  import Counter from "./lib/Counter.svelte";
+  import Card from "./components/Card.svelte";
 
-  let columns = [1];
-  let rows = [1];
+  let columns = 2;
+  let rows = 3;
+
 </script>
 
 <main>
-
-  
-  <h1>Vite + Svelte</h1>
+  <h1>Kaya's app</h1>
 
   <div class="buttons">
-    <button on:click={() => rows = [...rows, 1]}>
-      Add a row
+    <button class="button" on:click={() => (rows = rows + 1)}> Add row </button>
+    <button class="button" on:click={() => (columns = columns + 1)}>
+      Add column
     </button>
-    <button on:click={() => columns = [...columns, 1]}>
-      add a column
+  </div>
+
+  <div class="buttons">
+    <button class="button" on:click={() => (rows = rows - 1)}>
+      Remove row
+    </button>
+    <button class="button" on:click={() => (columns = columns - 1)}>
+      Remove column
     </button>
   </div>
 
   <div class="card-column-wrapper">
-    {#each columns as column}
-    <div class="card-row-wrapper">
-      {#each rows as card}
-        <Card/>
-      {/each}
-    </div>
+    {#each Array(columns) as column}
+      <div class="card-row-wrapper">
+        {#each Array(rows) as card}
+          <Card />
+        {/each}
+      </div>
     {/each}
-
   </div>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
 </main>
 
 <style>
@@ -53,6 +46,11 @@
     will-change: filter;
     transition: filter 300ms;
   }
+
+  .button {
+    background: linear-gradient(to bottom right, #ffbbff, #fb61ff);
+  }
+
   .logo:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
   }

@@ -1,11 +1,41 @@
+<script>
+    import { LoremIpsum } from "lorem-ipsum";
+
+    function generateLoremIpsum(val) {
+        const lorem = new LoremIpsum({
+            sentencesPerParagraph: {
+                max: 8,
+                min: 4,
+            },
+            wordsPerSentence: {
+                max: 16,
+                min: 4,
+            },
+        });
+
+        if (val === "title") {
+            return lorem.generateWords(1);
+        } else {
+            return lorem.generateWords(8);
+        }
+    }
+
+    $: title = generateLoremIpsum("title");
+    $: description = generateLoremIpsum();
+</script>
+
 <div class="flex card-wrapper">
     <div class="image-wrapper">
-        <img class="image" src="https://picsum.photos/200?t={Math.random()}" alt="image" />
+        <img
+            class="image"
+            src="https://picsum.photos/200?t={Math.random()}"
+            alt="image"
+        />
     </div>
 
     <div class="card-content-wrapper">
-        <h1 class="text">Hello</h1>
-        <p class="text">This is a paragraph</p>
+        <h1 class="text">{title}</h1>
+        <p class="text">{description}</p>
     </div>
 </div>
 
@@ -26,7 +56,6 @@
     }
 
     .card-content-wrapper {
-
     }
 
     .card {
@@ -49,5 +78,3 @@
         flex-direction: column;
     }
 </style>
-
-
