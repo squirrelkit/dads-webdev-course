@@ -1,9 +1,12 @@
+<div>
+
+<input>
+<button>Search</button>
+</div>
 <div class="flex card-wrapper">
     <div class="image-wrapper">
         <img class="image" src="https://picsum.photos/200" alt="image" />
     </div>
-
-    <input value={name}/>
 
     <div class="card-content-wrapper">
         <h1 class="text">Hello</h1>
@@ -11,12 +14,22 @@
     </div>
 </div>
 
+<script>
+    let buttons = ['pink', 'blue', 'white']
+    let selected;
+</script>
+
 <style>
     .image-wrapper {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .button {
+        background: linear-gradient(to bottom right, #ff8888, #ff88aa);
+        border: 1px solid #456789;
     }
 
     .flex {
@@ -51,3 +64,5 @@
         flex-direction: column;
     }
 </style>
+
+
