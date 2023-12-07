@@ -35,8 +35,8 @@
         padding: 10px;
         margin: 10px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+        align-content: space-evenly;
     }
 
     .image {

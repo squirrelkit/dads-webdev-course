@@ -3,21 +3,35 @@
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
     import Card from './components/Card.svelte';
+
+  let columns = [1];
+  let rows = [1];
 </script>
 
 <main>
 
   
   <h1>Vite + Svelte</h1>
-  
-  <input>
-  <button class="button">Search</button>
-  
-  {#each [1, 2, 3] as number}
-    {#each [1, 2, 3] as number}
-      <Card/>
+
+  <div class="buttons">
+    <button on:click={() => rows = [...rows, 1]}>
+      Add a row
+    </button>
+    <button on:click={() => columns = [...columns, 1]}>
+      add a column
+    </button>
+  </div>
+
+  <div class="card-column-wrapper">
+    {#each columns as column}
+    <div class="card-row-wrapper">
+      {#each rows as card}
+        <Card/>
+      {/each}
+    </div>
     {/each}
-  {/each}
+
+  </div>
 
   <div class="card">
     <Counter />
