@@ -3,6 +3,8 @@
         <img class="image" src="https://picsum.photos/200" alt="image" />
     </div>
 
+    <input value={name}/>
+
     <div class="card-content-wrapper">
         <h1 class="text">Hello</h1>
         <p class="text">This is a paragraph</p>
@@ -15,8 +17,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
+
     .flex {
         display: flex;
     }
