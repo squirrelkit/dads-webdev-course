@@ -7,8 +7,17 @@
 
 <main>
 
+  
   <h1>Vite + Svelte</h1>
-  <Card />
+  
+  <input>
+  <button class="button">Search</button>
+  
+  {#each [1, 2, 3] as number}
+    {#each [1, 2, 3] as number}
+      <Card/>
+    {/each}
+  {/each}
 
   <div class="card">
     <Counter />
