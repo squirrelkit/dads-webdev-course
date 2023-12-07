@@ -1,6 +1,6 @@
 <div class="flex card-wrapper">
     <div class="image-wrapper">
-        <img class="image" src="https://picsum.photos/200" alt="image" />
+        <img class="image" src="https://picsum.photos/200?t={Math.random()}" alt="image" />
     </div>
 
     <div class="card-content-wrapper">
