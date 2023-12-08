@@ -5,8 +5,8 @@
   import Card from "./components/Card.svelte";
   import Box from "./components/Box.svelte";
 
-  let columns = 2;
-  let rows = 3;
+  let columns = 3;
+  let rows = 2;
 
 </script>
 
