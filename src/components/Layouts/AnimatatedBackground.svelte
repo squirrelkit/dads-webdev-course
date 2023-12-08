@@ -1,0 +1,1 @@
+<div class="animatated-background"></div>
