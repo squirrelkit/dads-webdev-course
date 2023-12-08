@@ -1,13 +1,25 @@
-<div class="box">
+<script>
+    const randomHue = () => {
+        return Math.floor(Math.random() * 360);
+    }
 
+    const randomAlpha = () => {
+        return Math.random();
+    }
+
+    $: hue1 = randomHue();
+    $: hue2 = randomHue();
+    $: hue3 = randomHue();
+    $: alpha = randomAlpha();
+</script>
+
+<div class="box flex">
+    <slot {hue1} {hue2} {hue3} {alpha}/>
 </div>
 
 <style>
     .box {
-        max-width: 1rem;
-        max-height: 1rem;
-        width: 100px;
-        height: 100px;
-        background-color: #123123;
+        width: 100%;
+        height: 100%;
     }
 </style>

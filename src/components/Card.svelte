@@ -49,6 +49,7 @@
 
     .flex {
         display: flex;
+        width: 100%;
     }
 
     .card-wrapper {
