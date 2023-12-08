@@ -17,20 +17,23 @@
     <div class="num-of-col-row-button">Rows: {rows}</div>
   </div>
 
-  <div class="buttons">
-    <button class="button" on:click={() => (rows = rows + 1)}> Add row </button>
-    <button class="button" on:click={() => (columns = columns + 1)}>
-      Add column
-    </button>
-  </div>
+  <div class="button-wrapper">
+    <div class="buttons-inner flex">
+      <button class="button" on:click={() => (rows = rows + 1)}> Add row </button>
+      <button class="button" on:click={() => (rows = rows - 1)}>
+        Remove row
+      </button>
+    </div>
+    
+    <div class="buttons-inner flex">
+      <button class="button" on:click={() => (columns = columns + 1)}>
+        Add column
+      </button>
+      <button class="button" on:click={() => (columns = columns - 1)}>
+        Remove column
+      </button>
+    </div>
 
-  <div class="buttons">
-    <button class="button" on:click={() => (rows = rows - 1)}>
-      Remove row
-    </button>
-    <button class="button" on:click={() => (columns = columns - 1)}>
-      Remove column
-    </button>
   </div>
 
 
@@ -52,7 +55,17 @@
 
 <style>
   .button {
-    background: linear-gradient(to bottom right, #ffbbff, #fb61ff);
+    background: linear-gradient(to bottom right, #7f5500, #cfc500, #a2cf00, #087f00);
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons-inner {
+    display: flex;
+    flex-direction: column;
   }
 
   .box-color {
