@@ -11,6 +11,11 @@
 
 <main>
   <h1>Kaya's app</h1>
+  
+  <div>
+    <div class="num-of-col-row-button">Columns: {columns}</div>
+    <div class="num-of-col-row-button">Rows: {rows}</div>
+  </div>
 
   <div class="buttons">
     <button class="button" on:click={() => (rows = rows + 1)}> Add row </button>
@@ -27,6 +32,7 @@
       Remove column
     </button>
   </div>
+
 
   <div class="card-column-wrapper">
     {#each Array(columns) as column}
@@ -51,5 +57,10 @@
 
   .box-color {
     flex: 1;
+  }
+
+  .num-of-col-row-button {
+    background: linear-gradient(to bottom right, #cccccc, #eeeeee, ffffff);
+
   }
 </style>
