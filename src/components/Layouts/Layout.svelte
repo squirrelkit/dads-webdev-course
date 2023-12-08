@@ -26,7 +26,7 @@ import Topnav from "./Topnav.svelte";
         "topnav topnav topnav"
         "sidenav main main"
         "footer footer footer";
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 5rem 1fr;
         grid-template-rows: 50px 1fr 50px;
     }
 
