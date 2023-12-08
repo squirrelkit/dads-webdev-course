@@ -76,7 +76,7 @@ button {
 }
 
 .main {
-  background: linear-gradient(#88bbf0, #fbbbff);
+  background: linear-gradient(to bottom right, #a9deff, #fbc9ff);
 }
 
 button:hover {

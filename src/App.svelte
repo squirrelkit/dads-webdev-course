@@ -3,6 +3,7 @@
   import viteLogo from "/vite.svg";
   import Counter from "./lib/Counter.svelte";
   import Card from "./components/Card.svelte";
+  import Box from "./components/Box.svelte";
 
   let columns = 2;
   let rows = 3;
@@ -32,7 +33,7 @@
     {#each Array(columns) as column}
       <div class="card-row-wrapper">
         {#each Array(rows) as card}
-          <Card />
+          <Box />
         {/each}
       </div>
     {/each}
@@ -40,24 +41,7 @@
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-
   .button {
     background: linear-gradient(to bottom right, #ffbbff, #fb61ff);
-  }
-
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
   }
 </style>
