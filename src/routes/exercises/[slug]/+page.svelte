@@ -4,4 +4,4 @@
     export let data = PageData;
 </script>
 
-A day's exercise. {slug}
+A generic template for daily work in the course: {slug}
