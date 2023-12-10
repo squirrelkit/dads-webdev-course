@@ -44,6 +44,6 @@
 	canvas {
 		margin: auto;
 		display: block;
-		box-shadow: 0px 2px 12px -2px rgba(0, 0, 0, 0.15);
+		box-shadow: 0px 2px 12px -2px rgba(121, 25, 25, 0.15);
 	}
 </style>

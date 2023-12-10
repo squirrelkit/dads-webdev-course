@@ -1,13 +1,21 @@
-
 <script>
-    import CanvasQuick from "./CanvasQuick.svelte";
-</script>
+    import { Canvas, Layer } from 'svelte-canvas';
 
-<style>
-    <canvas bind:this{canvas}/>
-</style>
-<h2 class="flex justify-center">2023-12-10</h2>
+    import Orbit2 from './Orbit2.svelte';
+  
+    const render = ({ context, width, height }) => {
+     context.beginPath();
+     context.arc(width / 2, height / 2, 100, 0, Math.PI * 2);
+     context.strokeStyle = 'pink';
+     context.fillStyle = 'blue';
+     context.lineWidth = 5;
+     context.fill();
+     context.stroke();
 
-<p class="flex justify-center">
-</p>
-
+    };
+  </script>
+  
+  <Canvas autoplay>
+    <Layer {render} />
+  </Canvas>
+  
