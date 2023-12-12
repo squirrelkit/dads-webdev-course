@@ -34,13 +34,15 @@
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="/exercises"
-
-				>
+					
+					>
 					Exercises
 				</a>
+				
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
+
