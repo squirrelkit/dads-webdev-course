@@ -36,7 +36,7 @@
 					href="/exercises"
 
 				>
-					exercises
+					Exercises
 				</a>
 			</svelte:fragment>
 		</AppBar>
