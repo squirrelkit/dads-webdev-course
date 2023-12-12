@@ -14,7 +14,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<strong><button class="text-xl uppercase"><a href="/">Skeleton</a></button></strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
