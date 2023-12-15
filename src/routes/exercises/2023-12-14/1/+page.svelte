@@ -1,6 +1,4 @@
-<!-- +page.svelte -->
-
-<script>
+<!-- <script>
     const hexes = [
       "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8",
       "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8",
@@ -50,4 +48,4 @@
       <div class="hex" style="margin-left: {offset * 2.5rem}">{hex}</div>
     {/each}
   </div>
-  
+   -->
