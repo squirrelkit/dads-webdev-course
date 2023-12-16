@@ -25,9 +25,9 @@
 				>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a class="btn btn-sm variant-ghost-surface" href="/about"> About us </a>
-				<a class="btn btn-sm variant-ghost-surface" href="/blog"> Blog </a>
-				<a class="btn btn-sm variant-ghost-surface" href="/exercises"> Exercises </a>
+				<a class="btn btn-sm variant-ghost-surface text-indigo-100" href="/about"> About us </a>
+				<a class="btn btn-sm variant-ghost-surface text-indigo-100" href="/blog"> Blog </a>
+				<a class="btn btn-sm variant-ghost-surface text-indigo-100" href="/exercises"> Exercises </a>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
