@@ -1,8 +1,28 @@
 <script>
-    let player = { x: 50, y: 50, isJumping: false };
+    import { onMount } from 'svelte';
+  
+    let player = { x: 50, y: 50, isJumping: false, velocityY: 0 };
+    const gravity = 2; // Adjust the gravity strength as needed
+    const jumpStrength = 50; // Adjust the jump strength as needed
+  
+    function updatePlayer() {
+      // Apply gravity to the player's velocity
+      player.velocityY += gravity;
+  
+      // Update the player's position based on the velocity
+      player.y = Math.min(80 * window.innerHeight / 100 - 20, player.y + player.velocityY);
+  
+      // Check if the player is on the ground and reset the isJumping flag
+      if (player.y === 80 * window.innerHeight / 100 - 20) {
+        player.isJumping = false;
+      }
+  
+      // Keep the player within the canvas boundaries
+      player.y = Math.max(0, player.y);
+    }
   
     function handleKeyPress(event) {
-      const step = 50; // Adjusted to move 50 pixels
+      const step = 50; // Adjusted to move 10 pixels
   
       switch (event.key) {
         case 'ArrowUp':
@@ -20,15 +40,21 @@
         case ' ':
           if (!player.isJumping) {
             player.isJumping = true;
-            player.y -= 50; // Adjust the jump height as needed
-            setTimeout(() => {
-              player.y += 50; // Reset the position after the jump
-              player.isJumping = false;
-            }, 1000); // Adjust the duration of the jump as needed (1 second in this case)
+            player.velocityY = -jumpStrength; // Set the upward velocity for the jump
           }
           break;
       }
     }
+  
+    function updateGame() {
+      updatePlayer();
+      requestAnimationFrame(updateGame);
+    }
+  
+    onMount(() => {
+      // Start the game loop when the component is mounted
+      updateGame();
+    });
   </script>
   
   <style>
@@ -53,8 +79,6 @@
       background-color: green;
       border-radius: 50%; /* Make it a perfect circle */
       position: absolute;
-      top: 50px;
-      left: 50px;
       transition: top 0.2s, left 0.2s; /* Smooth movement transition */
     }
   </style>
