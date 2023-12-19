@@ -2,8 +2,9 @@
     import { onMount } from 'svelte';
   
     let player = { x: 50, y: 50, isJumping: false, velocityY: 0 };
-    const gravity = 2; // Adjust the gravity strength as needed
-    const jumpStrength = 50; // Adjust the jump strength as needed
+    const gravity = 1; // Adjust the gravity strength as needed
+    const jumpStrength = 25; // Adjust the jump strength as needed
+    const horizontalStep = 50; // Adjusted to move 10 pixels horizontally
   
     function updatePlayer() {
       // Apply gravity to the player's velocity
@@ -22,26 +23,25 @@
     }
   
     function handleKeyPress(event) {
-      const step = 50; // Adjusted to move 10 pixels
-  
       switch (event.key) {
         case 'ArrowUp':
-          player.y = Math.max(0, player.y - step);
-          break;
-        case 'ArrowDown':
-          player.y = Math.min(80 * window.innerHeight / 100 - 20, player.y + step); // 80% of the viewport height
-          break;
-        case 'ArrowLeft':
-          player.x = Math.max(0, player.x - step);
-          break;
-        case 'ArrowRight':
-          player.x = Math.min(80 * window.innerWidth / 100 - 20, player.x + step); // 80% of the viewport width
-          break;
-        case ' ':
+          // Jump logic remains the same
           if (!player.isJumping) {
             player.isJumping = true;
-            player.velocityY = -jumpStrength; // Set the upward velocity for the jump
+            player.velocityY = -jumpStrength;
           }
+          break;
+        case 'ArrowDown':
+          // Adjusted to move vertically
+          player.y = Math.min(80 * window.innerHeight / 100 - 20, player.y + horizontalStep);
+          break;
+        case 'ArrowLeft':
+          // Move left
+          player.x = Math.max(0, player.x - horizontalStep);
+          break;
+        case 'ArrowRight':
+          // Move right
+          player.x = Math.min(window.innerWidth - 20, player.x + horizontalStep);
           break;
       }
     }
