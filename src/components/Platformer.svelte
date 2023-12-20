@@ -17,7 +17,7 @@
   function updatePlayer() {
     player.velocityY += gravity;
 
-    player.y = Math.min(80 * window.innerHeight / 100 - 20, player.y + player.velocityY);
+    player.y = Math.min(89 * window.innerHeight / 100 - 20, player.y + player.velocityY);
 
     if (player.y === 80 * window.innerHeight / 100 - 20) {
       player.isJumping = false;
@@ -81,20 +81,24 @@
 </script>
 
 <style>
-  body {
+  body, html {
+    height: 100%;
     margin: 0;
+    padding: 0;
     overflow: hidden;
   }
 
   .canvas {
     width: 100vw;
-    height: calc(100vh - 1rem); /* Replace <height_of_topnav> with the actual height of your top navigation bar */
+    height: 100vh;
     border: 1px solid #000;
     background: linear-gradient(to bottom right, red, orange);
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
+    
   }
+  
 
   .player {
     width: 20px;
