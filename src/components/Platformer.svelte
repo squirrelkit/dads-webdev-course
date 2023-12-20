@@ -1,6 +1,14 @@
 <script>
   import { onMount } from 'svelte';
-
+  import { Pane } from 'tweakpane';
+  
+  let PARAMS = {
+    gravity: 1,
+    jumpStrength: 15,
+    horizontalStep: 5
+  }
+  const pane  = new Pane(PARAMS);
+  
   let player = { x: 50, y: 50, isJumping: false, velocityY: 0, velocityX: 0 };
   const gravity = 1; // Adjust the gravity strength as needed
   const jumpStrength = 15; // Adjust the jump strength as needed
@@ -92,7 +100,7 @@
     width: 100vw;
     height: 100vh;
     border: 1px solid #000;
-    background: linear-gradient(to bottom right, red, orange);
+    background: linear-gradient(to bottom right, #ff6262, #fbc05c);
     position: absolute;
     top: 5rem;
     left: 0;
@@ -103,7 +111,7 @@
   .player {
     width: 20px;
     height: 20px;
-    background-color: green;
+    background: linear-gradient(to bottom, #0000ff, #5e5eff);
     border-radius: 50%;
     position: absolute;
     transition: top 0.2s, left 0.2s;
@@ -113,6 +121,16 @@
     background-color: #333;
     position: absolute;
   }
+
+  footer {
+    background: #30b530;
+    height: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 </style>
 
 <div class="canvas" tabindex="0" on:keydown={handleKeyPress} on:keyup={handleKeyRelease}>
@@ -121,3 +139,5 @@
   {/each}
   <div class="player" style="top: {player.y}px; left: {player.x}px;"></div>
 </div>
+
+<footer></footer>
