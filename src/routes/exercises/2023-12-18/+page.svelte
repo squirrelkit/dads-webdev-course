@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import MazeGame from '$components/MazeGame.svelte';
+	import Platformer from '$components/Platformer.svelte';
 </script>
 
-<MazeGame />
+<Platformer />
